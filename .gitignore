@@ -1,0 +1,26 @@
+# Archives
+*.zip
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Hugging Face caches & training outputs
+.cache/
+outputs/
+checkpoints/
+data/
+
+# Weights & binaries
+*.safetensors
+pytorch_model.bin
+
+# OS metadata
+.DS_Store
+Thumbs.db

@@ -1,0 +1,71 @@
+{
+  "project_name": "distilbert-conll2003-ner",
+  "model_name_or_path": "distilbert/distilbert-base-uncased",
+  "model_revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "dataset_repo_id": "tner/conll2003",
+  "dataset_revision": "b18612dee0007b1f7129731dbf2f5f2ed4039ad3",
+  "data_files": {
+    "train": "dataset/train.json",
+    "validation": "dataset/valid.json",
+    "test": "dataset/test.json",
+    "label_map": "dataset/label.json"
+  },
+  "label_names_by_id": {
+    "0": "O",
+    "1": "B-ORG",
+    "2": "B-MISC",
+    "3": "B-PER",
+    "4": "I-PER",
+    "5": "B-LOC",
+    "6": "I-ORG",
+    "7": "I-MISC",
+    "8": "I-LOC"
+  },
+  "splits_sentences": {
+    "train": 14041,
+    "validation": 3250,
+    "test": 3453
+  },
+  "seed": 42,
+  "num_train_epochs": 3,
+  "per_device_train_batch_size": 8,
+  "per_device_eval_batch_size": 8,
+  "max_sequence_length": 128,
+  "learning_rate": 0.00005,
+  "weight_decay": 0.0,
+  "warmup_ratio": 0.0,
+  "optimizer": "Transformers Trainer default AdamW",
+  "scheduler": "Transformers Trainer default linear schedule",
+  "logging_steps": 500,
+  "torch_num_threads": 8,
+  "dataloader_num_workers": 0,
+  "force_cpu": true,
+  "validation_checkpoint_metric": "entity-level seqeval F1",
+  "best_epoch": 3,
+  "output_dir": "outputs/run",
+  "cache_dir": ".cache/huggingface",
+  "run_started_utc": "2026-10-13T13:09:19.477154+00:00",
+  "run_finished_utc": "2026-10-13T13:56:34.567466+00:00",
+  "training_seconds": 2775.248,
+  "total_run_seconds": 2835.09,
+  "completed_optimizer_steps": 5268,
+  "hardware": {
+    "platform": "Linux-6.18.38+-x86_64-with-glibc2.39",
+    "cpu_model": "Intel(R) Xeon(R) Processor @ 2.50GHz",
+    "logical_cpu_count": 8,
+    "system_ram_gib": 23.64,
+    "device": "CPU",
+    "peak_process_rss_mib": 1972.2,
+    "torch_cuda_available": false
+  },
+  "software": {
+    "python": "3.12.3",
+    "torch": "2.5.1+cpu",
+    "numpy": "1.26.4",
+    "pyarrow": "18.1.0",
+    "transformers": "4.47.1",
+    "datasets": "3.2.0",
+    "seqeval": "1.2.2",
+    "accelerate": "1.2.1"
+  }
+}
