@@ -1,5 +1,7 @@
-# Archives
+# Archives & Bundles
 *.zip
+distilbert-conll2003-ner-reproducibility*/
+distilbert-conll2003-ner-repro-bundle/
 
 # Virtual environments
 .venv/
