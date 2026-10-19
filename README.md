@@ -13,7 +13,7 @@ Completed three epochs with seed 42, batch size 8, max sequence length 128, and 
 | Validation | 0.93850 | 0.94198 | **0.94024** | 0.05734 |
 | Test | 0.89458 | 0.90204 | **0.89829** | 0.14254 |
 
-See [`results.md`](results.md) for sample counts, token accuracy, hardware and timing. These results were measured on the available Linux CPU environment.
+See [`results.md`](results.md) for sample counts, token accuracy, hardware, and baseline Linux CPU timing. For local Windows CPU reproduction results and comparison, see [`local_test_run_results.md`](local_test_run_results.md).
 
 ## Reproducible run
 

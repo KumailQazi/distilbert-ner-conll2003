@@ -6,7 +6,10 @@ import argparse
 import json
 import os
 import platform
-import resource
+try:
+    import resource
+except ImportError:
+    resource = None
 import sys
 import time
 from datetime import datetime, timezone
@@ -55,6 +58,8 @@ def total_memory_gib() -> float | None:
 
 
 def peak_rss_mib() -> float | None:
+    if resource is None:
+        return None
     try:
         value = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
         # Linux reports KiB; macOS reports bytes.
